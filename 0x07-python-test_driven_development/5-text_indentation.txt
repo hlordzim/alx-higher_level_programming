@@ -1,0 +1,35 @@
+******How to Use 5-text_indentation.py******
+
+
+
+***usage***
+
+def text_indentation(text):
+    """
+    Prints a text with 2 new lines after each '.', '?', and ':' characters.
+
+    Args:
+        text (str): The input text.
+
+    Raises:
+        TypeError: If text is not a string.
+    """
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+
+    new_line = False
+
+    for char in text:
+        print(char, end="")
+
+        if char in ['.', '?', ':']:
+            new_line = True
+
+        elif char == '\n':
+            new_line = False
+
+        if new_line:
+            print("\n", end="")
+
+    print()  # Ensure the last line ends with a newline
+
