@@ -4,7 +4,7 @@
 
 class Rectangle:
     """Represent a rectangle.
-    
+
     Args:
         width (int): The width of the new rectangle.
         height (int): The height of the new rectangle.
