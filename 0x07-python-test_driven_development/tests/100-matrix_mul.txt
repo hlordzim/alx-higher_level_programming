@@ -1,0 +1,32 @@
+"""
+Matrix Multiplication
+
+This module provides a matrix multiplication function: matrix_mul(m_a, m_b).
+
+Usage:
+matrix_mul(m_a, m_b) returns a new matrix representing the multiplication of m_a by m_b.
+
+Examples:
+    >>> matrix_mul([[1, 2], [3, 4]], [[1, 2], [2, 3]])
+    [[7, 10], [15, 22]]
+
+    >>> matrix_mul([[1, 2]], [[3, 4], [5, 6]])
+    [[13, 16]]
+
+    >>> matrix_mul([[1.2, 5.5, 6.2], [4.66, 12.3, -9.2]],
+    ...             [[5.0, 3.3], [-2.9, 4.4], [7.2, 4.4]])
+    [[34.69, 55.44], [-78.61, 29.02]]
+
+Invalid Matrices:
+- The matrices m_a and m_b must be lists of lists containing only integers or floats.
+- Both matrices must not be empty, and their rows should be of the same size.
+- m_a and m_b should be rectangular matrices.
+
+Raises:
+- ValueError if matrices cannot be multiplied.
+- TypeError for invalid input types or sizes.
+"""
+
+def matrix_mul(m_a, m_b):
+    # Implementation of matrix_mul function
+    pass
