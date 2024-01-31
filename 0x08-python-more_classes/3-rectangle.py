@@ -51,9 +51,14 @@ class Rectangle:
     def __str__(self):
         """Return a string representation of the rectangle."""
         if self.__width == 0 or self.__height == 0:
-            return ""
+            return "{}({}, {})".format(
+                    self.__class__.__name__, self.__width, self.__height
+            )
         else:
-            return ("#" * self.__width + "\n") * self.__height
+            return (
+                "#" * self.__width + "\n"
+            ) * self.__height + "{}({}, {})".format
+            (self.__class__.__name__, self.__width, self.__height)
 
     def __repr__(self):
         """Return a string representation of the rectangle for debugging."""
