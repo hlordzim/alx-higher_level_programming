@@ -1,9 +1,9 @@
 #!/usr/bin/node
-"""script that writes a string to a file."""
+/* script that writes a string to a file.*/
 
 const fs = require('fs');
 
-// Get command line arguments
+
 const args = process.argv.slice(2);
 const filePath = args[0];
 const content = args[1];
