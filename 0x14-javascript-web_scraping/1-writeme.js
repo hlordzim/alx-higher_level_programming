@@ -4,20 +4,19 @@
 const fs = require('fs');
 
 
-const args = process.argv.slice(2);
-const filePath = args[0];
-const content = args[1];
+fs.writeFile(process.argv[2], process.argv[3], 'utf8', error => {
 
-if (!filePath || !content) {
-    console.log("Usage: node script.js <file_path> <content>");
-    process.exit(1);
-}
+  // Use fs.writeFile() to write data to a file specified as the third command-line argument (process.argv[2]).
 
-fs.writeFile(filePath, content, { encoding: 'utf8' }, (err) => {
-    if (err) {
-        console.error(`An error occurred: ${err}`);
-        process.exit(1);
-    } else {
-        console.log(`Content written to ${filePath} successfully.`);
-    }
+  // The data to be written is taken from the fourth command-line argument (process.argv[3]).
+
+
+  if (error) {
+
+    // If an error occurs during the write operation, the 'error' parameter will contain an error object.
+
+    console.error(error);
+
+  }
+
 });
